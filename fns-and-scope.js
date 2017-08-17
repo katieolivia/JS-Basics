@@ -17,7 +17,6 @@ function isTyler(name) {
 
 
 
-
 //////////////////PROBLEM 2////////////////////
 
 
@@ -39,7 +38,7 @@ function getName(){
 
  function welcome() {
  	name = getName();
- 	return "Welcome " + name;
+ 	alert("Welcome, " + name);
  }
 
 
@@ -50,7 +49,7 @@ function getName(){
 
 //What is the difference between arguments and parameters?
 
-//Parameters are the names/ place holders that we use when we define a function.  
+//Parameters are the names/ place holders that we use when we define a function.
 //Arguments are the actual values that we pass through a function when we call it.
 
 
@@ -77,16 +76,16 @@ function getName(){
  	var name = 'Katie';
  	return name;
  }
-  
+
 
 
 //Now save the function definition of myName into a new variable called newMyName
 
-var newMyName = myName();
+var newMyName = myName;
 
 //Now alert the result of invoking newMyName
 
-alert(newMyName)
+alert(newMyName());
 
 //////////////////PROBLEM 7////////////////////
 
@@ -95,7 +94,9 @@ alert(newMyName)
 //Create a function called outerFn which returns an anonymous function which returns your name.
 
 function outerFn() {
-	return myName();
+	return function() {
+		return 'Katie';
+	};
 }
 
 //Now save the result of invoking outerFn into a variable called innerFn.
